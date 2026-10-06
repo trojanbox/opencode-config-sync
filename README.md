@@ -30,7 +30,7 @@ OpenCode V2 全局配置同步插件。使用一个 Git 仓库在多台电脑之
 }
 ```
 
-插件入口直接导出 `{ id, setup }`，运行时不依赖 `@opencode/plugin` 包，因此本地插件加载时不会额外依赖 Plugin SDK 的模块解析。
+插件入口直接导出 `{ id, setup }`，运行时不依赖 `@opencode/plugin  包，因此本地插件加载时不会额外依赖 Plugin SDK 的模块解析。
 
 OpenCode 1.x 暂未作为本版本的兼容目标。
 
@@ -348,7 +348,7 @@ bun.lockb
 | `repository` | 无 | Git 远端；也可用 `OPENCODE_CONFIG_SYNC_REPOSITORY` |
 | `branch` | `main` | 同步分支 |
 | `configDir` | OpenCode 全局配置目录 | 通常无需设置 |
-| `stateDir` | XDG state / LocalAppData | 内部 clone 和三方合并基线 |
+| `stateDir` | XDG state / LocalAppDaTa | 内部 clone 和三方合并基线 |
 | `remoteDirectory` | `.opencode-config-sync/config` | 配置仓库中由插件管理的目录 |
 | `include` | 默认白名单 | 同步的文件/目录 |
 | `machineId` | hostname | Git commit 中标记来源机器 |
@@ -419,7 +419,7 @@ tmp/     # 同步期间的临时合并目录
 
 ## 开发与测试
 
-当前测试不需要网络，也不需要 OpenCode SDK：
+当前测试不需要网络，也不需要 OpenCode SDK；需要 Node.js 22.18+（该版本起原生 TypeScript type stripping 默认启用）：
 
 ```bash
 npm test
@@ -432,7 +432,7 @@ npm test
 3. 两台机器修改不同文件时自动合并。
 4. 明文 API Key 在首次 push 前被阻止。
 
-当前测试结果基于 Node 22 + 本地 bare Git repository。
+当前测试结果基于 Node.js 22.18+ 的原生 TypeScript type stripping + 本地 bare Git repository。
 
 ## 已知边界
 

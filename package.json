@@ -13,11 +13,11 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "test": "node --test test/*.test.ts",
     "check": "npm test"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=22.18"
   },
   "keywords": [
     "opencode",
