@@ -428,10 +428,12 @@ npm test
 
 覆盖：
 
-1. 空仓库首次 push + 第二台机器 pull。
-2. 两台机器修改同一文件时报告冲突。
-3. 两台机器修改不同文件时自动合并。
-4. 明文 API Key 在首次 push 前被阻止。
+1. V2 插件入口可注册 `config_sync`，无远端时 `status` 返回 `unconfigured`。
+2. 空仓库首次 push + 第二台机器 pull。
+3. 两台机器修改同一文件时报告冲突。
+4. 两台机器修改不同文件时自动合并。
+5. 明文 API Key 在首次 push 前被阻止。
+6. 从 `include` 白名单移除的路径会从插件管理的远端目录删除。
 
 当前测试结果基于 Node.js 22 + `tsx` + 本地 bare Git repository。
 
