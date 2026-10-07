@@ -1,0 +1,33 @@
+{
+  "name": "opencode-config-sync",
+  "version": "0.1.0",
+  "description": "Safe Git-backed synchronization for OpenCode global configuration.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./core": "./src/sync-engine.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "check": "npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "config",
+    "sync",
+    "git"
+  ],
+  "license": "UNLICENSED"
+}
