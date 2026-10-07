@@ -13,11 +13,14 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node --test test/*.test.ts",
+    "test": "tsx --test test/*.test.ts",
     "check": "npm test"
   },
   "engines": {
-    "node": ">=22.18"
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
   },
   "keywords": [
     "opencode",
