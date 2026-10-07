@@ -116,6 +116,7 @@ function validateRepository(value: string | undefined): string | undefined {
       if (/token|key|secret|password/i.test(key)) {
         throw new Error("repository URL must not contain credential-like query parameters")
       }
+    }
   }
 
   return value
